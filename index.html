@@ -1,0 +1,89 @@
+<body>
+    <style>
+        .maincontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .imagecontainer{
+            display: flex;
+            overflow: scroll;
+            gap: 20px;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            min-width: 200px;
+
+        }
+
+        ::-webkit-scrollbar{
+            display: none;
+        }
+
+        #btn1{
+            font-style: italic;
+            border: none;
+            background-color: transparent;
+            font-size: 32px;
+
+        }
+
+        #btn2{
+            font-style: italic;
+            border: none;
+            background-color: transparent;
+            font-size: 32px;
+
+        }
+
+    
+    </style>
+
+    <div class="maincontainer" id="maincont">
+          <button onclick="handleLeftclick()" id="btn1"><</button>
+            <div class="imagecontainer" id="imgcont">
+                    <div class="box">
+                        <img src="l1.jpg">
+                    </div>
+                    <div class="box">
+                        <img src="l2.jpg">
+                    </div>
+                    <div class="box">
+                        <img src="l3.jpg">
+                    </div>
+                    <div class="box">
+                        <img src="l4.jpg">
+                    </div>
+                    <div class="box">
+                        <img src="l5.jpg">
+                    </div>
+                    <div class="box">
+                        <img src="l2.jpg">
+                    </div>
+                    <div class="box">
+                        <img src="l5.jpg">
+                    </div>
+                    <div class="box">
+                    <img src="l1.jpg">
+                    </div>
+                 </div>
+         <button onclick="handleRightclick()" id="btn2">></button>
+    </div>
+   
+    <script>
+        var imgCont= document.getElementById("imgcont")
+         function handleLeftclick(){
+          imgCont.scrollLeft -=130;
+          console.log(imgCont.scrollLeft)
+         }
+
+         function handleRightclick(){
+            imgCont.scrollLeft +=120;
+
+         }
+    </script>
+</body>
